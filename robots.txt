@@ -1,0 +1,2 @@
+user-agent: *Disallow: /admin/Disallow: /cgi-bin/Disallow: /wp-admin/Allow: /wp-admin/admin-ajax.php 
+sitemap: https://www.nursingcollegeindelhi.com/sitemap.xml

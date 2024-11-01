@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ANM Colleges in Delhi</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to your CSS file -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+/* Root Variables */
+:root {
+  --primary-color: #010a13;
+  --secondary-color: #ff5722;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+  --font-family: "Arial", sans-serif;
+}
+
+/* General Styles */
+body {
+  font-family: var(--font-family);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Container for centering content */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--text-color);
+  font-size: calc(1.5em + 1vw);
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--primary-color);
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+/* Flexbox for layout */
+.college-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual college item */
+.college-item {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-in-out, boxShadow 0.3s ease;
+}
+
+/* Hover effect for college item */
+.college-item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px) scale(1.02);
+  border-color: var(--primary-color);
+}
+
+/* College item title */
+.college-item h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+  font-size: calc(1.2em + 0.5vw);
+  font-weight: 600;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 5px;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+/* Badge for special notes */
+.college-item .badge {
+  display: inline-block;
+  background: var(--secondary-color);
+  color: #fff;
+  font-size: 0.9em;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  animation: bounceIn 1s ease-in-out;
+}
+
+/* Contact info section */
+.contact-info p {
+  margin: 10px 0;
+  color: #555;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Contact info links */
+.contact-info a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* List of programs offered */
+.college-item ul {
+  list-style: disc;
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.college-item ul li {
+  margin: 5px 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .college-item {
+    flex-basis: 48%;
+  }
+}
+
+@media (max-width: 576px) {
+  .college-item {
+    flex-basis: 100%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .college-item h3 {
+    font-size: 1.5em;
+  }
+
+  .college-item .badge {
+    font-size: 0.8em;
+    padding: 4px 8px;
+  }
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Accessibility Improvements */
+a:focus,
+button:focus {
+  outline: 2px dashed var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+  background-color: #333;
+  overflow: hidden;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 24px;
+  color: white;
+  padding: 14px 20px;
+  cursor: pointer;
+}
+
+/* Responsive part */
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #333;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar li {
+    text-align: center;
+    width: 100%;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
+
+/* Section styles for clarity */
+section {
+  margin-top: 50px;
+}
+
+section h1 {
+  margin-top: 50px;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <nav>
+          <div class="logo">
+            <a href="#"><img src="favicon.ico.jpg" alt="YourLogo" /></a>
+          </div>
+
+          <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#college">College</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+          <div class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <nav class="navbar">
+      <div class="menu-icon" onclick="toggleMenu()">
+        ☰
+      </div>
+      <ul id="nav-links">
+        <li><a href="#anm">ANM Colleges</a></li>
+        <li><a href="#gnm">GNM Colleges</a></li>
+        <li><a href="#bscn">B.Sc Nursing Colleges</a></li>
+        <li><a href="#pbsc">Post Basic B.Sc. Nursing Colleges</a></li>
+        <li><a href="#mscn">M.Sc. Nursing Colleges</a></li>
+        <li><a href="#pbdnc">Post Basic Diploma in Nursing Colleges</a></li>
+      </ul>
+    </nav>
+    
+    
+
+    <section id = "anm">
+    <div class="container">
+      <h1 class="text-primary">ANM Colleges in Delhi</h1>
+      <hr />
+      <div class="college-list">
+        <div class="college-item">
+          <h3>Akanksha Institute of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> RZ-C-117, Gopal Nagar, Najafgarh, New
+              Delhi – 43
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:akanshainstituteofnursing@gmail.com"
+                >akanshainstituteofnursing@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 20</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Baba Haridass Institute of Nursing Education</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> Jharoda Kalan, Nazafgarh, New Delhi
+              -110072
+            </p>
+            <p><strong>Contact:</strong> 011-25315268</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:bhine_99@hotmail.com">bhine_99@hotmail.com</a>
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 30</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Institute of Public Health & Hygiene</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> RZ-A-165 Mahipal Pur Extn. Delhi-110037
+            </p>
+            <p><strong>Contact:</strong> 011-26782850</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:iphhcollege@gmail.com">iphhcollege@gmail.com</a>
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Lady Reading Health School</h3>
+          <div class="contact-info">
+            <p><strong>Address:</strong> Bara Hindu Rao, Delhi 110007</p>
+            <p><strong>Contact:</strong> 011-23635119, 011-23613473</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:ladyreadinghealthschool@gmail.com"
+                >ladyreadinghealthschool@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Government</p>
+            <p><strong>Seats:</strong> 40</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Mata Risalo Devi Institute of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> Shiv Mandir Colony, Safiabad Road,
+              Narela, Delhi 110040
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:mrdinstituteofnursing@gmail.com"
+                >mrdinstituteofnursing@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 30</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Rural Health Training Centre</h3>
+          <div class="contact-info">
+            <p><strong>Address:</strong> Najafgarh, New Delhi 110073</p>
+            <p><strong>Contact:</strong> 011-23321848</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:rhtcnajafgarh@gmail.com"
+                >rhtcnajafgarh@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Government</p>
+            <p><strong>Seats:</strong> 40</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Salokaya College of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> Plot No. 1147, Near Rithala Metro
+              Station, Delhi 110085
+            </p>
+            <p><strong>Contact:</strong> 011-27933309</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:msudan@salokaya.com">msudan@salokaya.com</a>
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 40</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>
+            Shakuntla School of Nursing (S S Health Education Private Ltd.)
+          </h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> Jaunti, Garhi Road, Jaunti, New Delhi
+              110081
+            </p>
+            <p><strong>Contact:</strong> 8010097243, 9911489078, 9811183761</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:shakuntlaschoolofnursing@gmail.com"
+                >shakuntlaschoolofnursing@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Sushila School of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> Gali No.9, Gautam Colony, Opp. Shiv
+              Mandir, Safiabad Road, Narela, Delhi 110040
+            </p>
+            <p><strong>Contact:</strong> 011-27282062</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:sushilanursing@gmail.com"
+                >sushilanursing@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 30</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Institute of Paramedical Sciences and Research (IPSR)</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> 192, Asola Fatehpur Beri, New Delhi
+              110074
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:principalipsr74@gmail.com"
+                >principalipsr74@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 40</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Maharaja Agarsain College of Nursing</h3>
+          <div class="contact-info">
+            <p><strong>Address:</strong> Bawana Road, Narela, Delhi 110040</p>
+            <p><strong>Contact:</strong> 011-27281049</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:macnnarela40@gmail.com">macnnarela40@gmail.com</a>
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>
+            Saviour College of Nursing (Rathi Charitable & Education Trust)
+          </h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> Near HP Petrol Pump, Akash Vihar,
+              Ranhola, New Delhi 110041
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:saviourcollegeofnursing@gmail.com"
+                >saviourcollegeofnursing@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 40</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>M R Bharti School of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> 53/6 Firni Road, West Cabin Block,
+              Mundka, New Delhi 110041
+            </p>
+            <p><strong>Contact:</strong> 8949425723, 9650001460, 9650001470</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:mr.nursing2022@gmail.com"
+                >mr.nursing2022@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 40</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Institute of Para Medical Technology</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> D-5 Chatterpur Pahari, 60 feet Road,
+              Opposite BSES Office, New Delhi 110074
+            </p>
+            <p><strong>Contact:</strong> 9910057123, 9910055123, 9810115973</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:ipmtnewdelhi@gmail.com">ipmtnewdelhi@gmail.com</a>
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 30</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Impact Paramedical & Health Institute College of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> G-99/1, Laxmi Park Road, Saini Mohalla,
+              Block G, Vandana Vihar, Nangloi, New Delhi 110041
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:iphinstitute@gmail.com">iphinstitute@gmail.com</a>
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>
+            Sarah School of Nursing (Sarah Education and Health Care Trust)
+          </h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> KH-241, 243 & 245, Near Jain Mandir
+              Smarak, GT Karnal Road, Budhpur, New Delhi 110036
+            </p>
+            <p><strong>Contact:</strong> 800597618, 9667680246</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:sarahschoolofnursing@gmail.com"
+                >sarahschoolofnursing@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 40</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section id = "gnm">
+    <div class="container">
+      <h1 class="text-primary">GNM Colleges in Delhi</h1>
+      <hr />
+      <div class="college-list">
+        <div class="college-item">
+          <h3>Akanksha Institute of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> RZ-C-117, Gopal Nagar, Najafgarh, New
+              Delhi – 110043
+            </p>
+            <p>
+              <strong>Contact:</strong>
+              <a href="mailto:akanshainstituteofnursing@gmail.com"
+                >akanshainstituteofnursing@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 35</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Apollo School of Nursing</h3>
+          <div class="contact-info">
+            <p><strong>Address:</strong> Sarita Vihar, New Delhi - 110044</p>
+            <p>
+              <strong>Contact:</strong> Tel: 26825580,
+              <a href="mailto:marylinef@apollodelhi.com"
+                >marylinef@apollodelhi.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Brahm Shakti School of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> U-1/78 BudhiVihar, Main Kanjhawala Road,
+              Delhi - 110086
+            </p>
+            <p><strong>Contact:</strong> Tel: 27537894, 27537967, 27531683</p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Baba Haridass Institute of Nursing Education</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> Jharoda Kalan, Nazafgarh, New Delhi -
+              110072
+            </p>
+            <p>
+              <strong>Contact:</strong> Tel: 25315268,
+              <a href="mailto:bhine_99@hotmail.com">bhine_99@hotmail.com</a>
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>School of Nursing, Sir Ganga Ram Hospital</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> Old Rajinder Nagar, New Delhi - 110060
+            </p>
+            <p>
+              <strong>Contact:</strong> Tel: 42251115,
+              <a href="mailto:nursingschool@sgrh.com">nursingschool@sgrh.com</a>
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 40</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Ginni Devi Action School of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> FC-34-A-4, Paschim Vihar, New Delhi -
+              110063
+            </p>
+            <p>
+              <strong>Contact:</strong>
+              <a href="mailto:principal@actionhospital.com"
+                >principal@actionhospital.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 30</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Holy Family College of Nursing</h3>
+          <div class="contact-info">
+            <p><strong>Address:</strong> Okhla Road, New Delhi - 110025</p>
+            <p>
+              <strong>Contact:</strong> Tel: 26845900 Extn.211,
+              <a href="mailto:nursing.college@holyfamilyhospitaldelhi.org"
+                >nursing.college@holyfamilyhospitaldelhi.org</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Smt. J R T School of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> MCKR Hospital, Lajpat Nagar III, New
+              Delhi
+            </p>
+            <p>
+              <strong>Contact:</strong> Tel: 42000488,
+              <a href="mailto:jrtschoolofnursing@moolchandhealthcare.com"
+                >jrtschoolofnursing@moolchandhealthcare.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 30</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Mata Risalo Devi Institute of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> Shiv Mandir Colony, Safiabad Road,
+              Narela, Delhi - 110040
+            </p>
+            <p>
+              <strong>Contact:</strong>
+              <a href="mailto:mrdinstituteofnursing@gmail.com"
+                >mrdinstituteofnursing@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 30</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Rajmata Vijayaraje Scindia Nursing School</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> Swami Dayanand Hospital, Dilshad Garden,
+              Delhi - 110095
+            </p>
+            <p>
+              <strong>Contact:</strong>
+              <a href="mailto:principalrvsn@gmail.com"
+                >principalrvsn@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Government</p>
+            <p><strong>Seats:</strong> 20</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Rufaida College of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> Faculty of Nursing, Jamia Hamdard Nagar,
+              New Delhi - 110062
+            </p>
+            <p>
+              <strong>Contact:</strong> Tel: 26059688 extn.5680,
+              <a href="mailto:principal.rcn1@gmail.com"
+                >principal.rcn1@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 70</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>College of Nursing, St. Stephen’s Hospital</h3>
+          <div class="contact-info">
+            <p><strong>Address:</strong> Near Tis Hazari, Delhi - 110054</p>
+            <p>
+              <strong>Contact:</strong> Tel: 23957977,
+              <a href="mailto:consshdelhi@gmail.com">consshdelhi@gmail.com</a>
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Salokaya College of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> Plot No. 1147, Near Rithala Metro
+              Station, Rithla Sector 5, Delhi - 110085
+            </p>
+            <p>
+              <strong>Contact:</strong>
+              <a href="mailto:msudan@salokaya.com">msudan@salokaya.com</a>
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 60</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Sant Parmanand Hospital School of Nursing</h3>
+          <div class="contact-info">
+            <p><strong>Address:</strong> Sant Nagar, Burari, Delhi - 110084</p>
+            <p>
+              <strong>Contact:</strong>
+              <a href="mailto:principal@sphnursingschool.com"
+                >principal@sphnursingschool.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>
+            Shakuntla School of Nursing (S S Health Education Private Ltd.)
+          </h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> Jaunti, Garhi Road, Jaunti, New Delhi -
+              110081
+            </p>
+            <p>
+              <strong>Contact:</strong> Ph: 8010097243, 9911489078, 9811183761,
+              <a href="mailto:shakuntlaschoolofnursing@gmail.com"
+                >shakuntlaschoolofnursing@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Sushila School of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> Gali No.9, Gautam Colony, Opp. Shiv
+              Mandir, Safiabad Road, Narela, Delhi - 110040
+            </p>
+            <p>
+              <strong>Contact:</strong> Tel: 011-27282062,
+              <a href="mailto:sushilanursing@gmail.com"
+                >sushilanursing@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 60</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>School of Nursing, Tirath Ram Shah Hospital</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> 1, Isher Das Sahney Road, Rajpur Road,
+              Delhi - 110054
+            </p>
+            <p>
+              <strong>Contact:</strong> Tel: 23972425,
+              <a href="mailto:trsch.info@gmail.com">trsch.info@gmail.com</a>,
+              <a href="mailto:tirathramshah@yahoo.co.in"
+                >tirathramshah@yahoo.co.in</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 30</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>
+            Saviour College of Nursing (Rathi Charitable & Education Trust)
+          </h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> Near HP Petrol Pump, Akash Vihar,
+              Ranhola, New Delhi - 110041
+            </p>
+            <p>
+              <strong>Contact:</strong>
+              <a href="mailto:saviourcollegeofnursing@gmail.com"
+                >saviourcollegeofnursing@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Institute of Paramedical Sciences and Research (IPSR)</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> 192 Asola Fatehpur Beri, New Delhi -
+              110074
+            </p>
+            <p>
+              <strong>Contact:</strong>
+              <a href="mailto:principalipsr74@gmail.com"
+                >principalipsr74@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 40</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>M R Bharti School of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> 53/6 Firni Road, West Cabin Block,
+              Mundka, New Delhi - 110041
+            </p>
+            <p>
+              <strong>Contact:</strong> Ph: 8949425723, 9650001460, 9650001470,
+              <a href="mailto:mr.nursing2022@gmail.com"
+                >mr.nursing2022@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 40</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Institute of Para Medical Technology</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> D-5 Chatterpur Pahari, 60 Feet Road,
+              Opposite BSES Office, New Delhi - 110074
+            </p>
+            <p>
+              <strong>Contact:</strong> Ph: 9910057123, 9910055123, 9810115973,
+              <a href="mailto:ipmtnewdelhi@gmail.com">ipmtnewdelhi@gmail.com</a>
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 30</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Maharaja Agarsain College of Nursing</h3>
+          <div class="contact-info">
+            <p><strong>Address:</strong> Bawana Road, Narela, Delhi - 110040</p>
+            <p>
+              <strong>Contact:</strong> Ph: 011-27281049,
+              <a href="mailto:macnnarela40@gmail.com">macnnarela40@gmail.com</a>
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Institute of Public Health & Hygiene</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> RZ-A-165 Mahipal Pur Extn., Delhi -
+              110037
+            </p>
+            <p>
+              <strong>Contact:</strong> Tel: 011-26782850,
+              <a href="mailto:iphhcollege@gmail.com">iphhcollege@gmail.com</a>
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Impact Paramedical & Health Institute College of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> G-99/1, Laxmi Park Road, Saini Mohalla,
+              Block G, Vandana Vihar, Nangloi, New Delhi - 110041
+            </p>
+            <p>
+              <strong>Contact:</strong>
+              <a href="mailto:iphinstitute@gmail.com">iphinstitute@gmail.com</a>
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>
+            Sarah School of Nursing (Sarah Education and Health Care Trust)
+          </h3>
+          <div class="contact-info">
+            <p>
+              <strong>Address:</strong> KH-241, 243 & 245, Near Jain Mandir
+              Smarak, GT Karnal Road, Budhpur, New Delhi - 110036
+            </p>
+            <p>
+              <strong>Contact:</strong> Ph: 800597618, 9667680246,
+              <a href="mailto:sarahschoolofnursing@gmail.com"
+                >sarahschoolofnursing@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <!-- Include any additional colleges here in similar format -->
+      </div>
+    </div>
+  </section>
+
+  <section id="bscn">
+    <div class="container">
+      <h1>B.Sc Nursing Colleges in Delhi</h1>
+      <div class="college-list">
+        <div class="college-item">
+          <h3>Ahilya Bai College of Nursing</h3>
+          <div class="contact-info">
+            <p><strong>Affiliated Hospital:</strong> Lok Nayak Hospital</p>
+            <p><strong>Location:</strong> New Delhi, Delhi</p>
+            <p>
+              <strong>Contact:</strong>
+              <a href="tel:011-23230823">011-23230823</a>
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:abcon.lnh@gmail.com">abcon.lnh@gmail.com</a>
+            </p>
+            <p><strong>Type:</strong> Government</p>
+            <p><strong>Seats:</strong> 40</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Army College of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Location:</strong> R & R Dhula Kuan, Near Subroto Park,
+              Delhi Cantt.
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:sonahrr@gmail.com">sonahrr@gmail.com</a>
+            </p>
+            <p><strong>Type:</strong> Government</p>
+            <p><strong>Seats:</strong> 30</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Holy Family College of Nursing</h3>
+          <div class="contact-info">
+            <p><strong>Location:</strong> Okhla Road, New Delhi -110025</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:nursing.college@holyfamilyhospitaldelhi.org"
+                >nursing.college@holyfamilyhospitaldelhi.org</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Lakshmi Bai Batra College of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Affiliated Hospital:</strong> Batra Hospital & Research
+              Centre
+            </p>
+            <p>
+              <strong>Location:</strong> Tughlakabad Institutional Area,
+              Vayusenabad, New Delhi - 110062
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:lbbcn@rediffmail.com">lbbcn@rediffmail.com</a>
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 60</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Lady Hardinge Medical College, College of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Location:</strong> Connaught Place, New Delhi - 110001
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:chandankashyap1@gmail.com"
+                >chandankashyap1@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Government</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Rajkumari Amrit Kaur College of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Location:</strong> Lajpat Nagar III, New Delhi -110024
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:Principal@rakcon.com">Principal@rakcon.com</a>
+            </p>
+            <p>
+              <strong>Contact:</strong>
+              <a href="tel:011-26435397">011-26435397</a>
+            </p>
+            <p><strong>Type:</strong> Government</p>
+            <p><strong>Seats:</strong> 75</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Dr. Ram Manohar Lohia Hospital College of Nursing</h3>
+          <div class="contact-info">
+            <p><strong>Location:</strong> New Delhi - 110001</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:Nirmal188in2012@yahoo.com"
+                >Nirmal188in2012@yahoo.com</a
+              >
+            </p>
+            <p>
+              <strong>Contact:</strong>
+              <a href="tel:011-23404518">011-23404518</a>
+            </p>
+            <p><strong>Type:</strong> Government</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Rufaida College of Nursing, Faculty of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Location:</strong> Jamia Hamdard Nagar, New Delhi - 110062
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:principal.rcn1@gmail.com"
+                >principal.rcn1@gmail.com</a
+              >
+            </p>
+            <p>
+              <strong>Contact:</strong>
+              <a href="tel:26059688">26059688</a> extn.5680
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 60</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>College of Nursing, St. Stephen’s Hospital</h3>
+          <div class="contact-info">
+            <p><strong>Location:</strong> Near Tis Hazari, Delhi - 110054</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:consshdelhi@gmail.com">consshdelhi@gmail.com</a>
+            </p>
+            <p><strong>Contact:</strong> <a href="tel:23957977">23957977</a></p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>College of Nursing, VMMC and Safdarjung Hospital</h3>
+          <div class="contact-info">
+            <p><strong>Location:</strong> Ansari Nagar, New Delhi - 110029</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:Sjhcollegeofnursing@gmail.com"
+                >Sjhcollegeofnursing@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Government</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>School of Nursing, Kasturba Hospital</h3>
+          <div class="contact-info">
+            <p><strong>Location:</strong> Darya Ganj, Delhi - 110002</p>
+            <p><strong>Contact:</strong> <a href="tel:23283378">23283378</a></p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:nursingschoolkh@gmail.com"
+                >nursingschoolkh@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Government</p>
+            <p><strong>Seats:</strong> 20</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Florence Nightingale School of Nursing</h3>
+          <div class="contact-info">
+            <p><strong>Affiliated Hospital:</strong> G.T.B. Hospital</p>
+            <p><strong>Location:</strong> Dilshad Garden, Delhi – 110095</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:collegeofnursinggtbh@gmail.com"
+                >collegeofnursinggtbh@gmail.com</a
+              >
+            </p>
+            <p>
+              <strong>Contact:</strong> <a href="tel:22586262">22586262</a> Ext.
+              2188
+            </p>
+            <p><strong>Type:</strong> Government</p>
+            <p><strong>Seats:</strong> 77</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Hindu Rao Hospital School of Nursing</h3>
+          <div class="contact-info">
+            <p><strong>Location:</strong> Bara Hindu Rao, Delhi -110007</p>
+            <p>
+              <strong>Contact:</strong>
+              <a href="tel:23919613">23919613</a> Extn. 266
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:sonhrh@gmail.com">sonhrh@gmail.com</a>
+            </p>
+            <p><strong>Type:</strong> Government</p>
+            <p><strong>Seats:</strong> 20</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Panna Dai School of Nursing</h3>
+          <div class="contact-info">
+            <p><strong>Affiliated Hospital:</strong> DDU Hospital</p>
+            <p><strong>Location:</strong> Hari Nagar, New Delhi-110064</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:schoolofnursingdduhospital@gmail.com"
+                >schoolofnursingdduhospital@gmail.com</a
+              >
+            </p>
+            <p><strong>Type:</strong> Government</p>
+            <p><strong>Seats:</strong> 40</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>
+            Shakuntla School of Nursing (S S Health Education Private Ltd.)
+          </h3>
+          <div class="contact-info">
+            <p>
+              <strong>Location:</strong> Jaunti, Garhi Road, Jaunti, New Delhi -
+              110081
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:shakuntlaschoolofnursing@gmail.com"
+                >shakuntlaschoolofnursing@gmail.com</a
+              >
+            </p>
+            <p>
+              <strong>Contact:</strong> <a href="tel:8010097243">8010097243</a>,
+              <a href="tel:9911489078">9911489078</a>,
+              <a href="tel:9811183761">9811183761</a>
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Maharaja Agarsain College of Nursing</h3>
+          <div class="contact-info">
+            <p><strong>Location:</strong> Bawana Road, Narela, Delhi -110040</p>
+            <p>
+              <strong>Contact:</strong>
+              <a href="tel:011-27281049">011-27281049</a>
+            </p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:macnnarela40@gmail.com">macnnarela40@gmail.com</a>
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 50</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pbsc">
+    <div class="container">
+      <h1>Post Basic B.Sc. Nursing Colleges in Delhi</h1>
+      <div class="college-list">
+        <div class="college-item">
+          <h3>Holy Family College of Nursing</h3>
+          <div class="contact-info">
+            <p><strong>Location:</strong> Okhla Road, New Delhi - 110025</p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 30</p>
+            <p>
+              <strong>Contact:</strong>
+              <a href="mailto:nursing.college@holyfamilyhospitaldelhi.org"
+                >nursing.college@holyfamilyhospitaldelhi.org</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Rufaida College of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Location:</strong> Faculty of Nursing, Jamia Hamdard,
+              Nagar New Delhi - 110062
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 30</p>
+            <p>
+              <strong>Contact:</strong>
+              <a href="mailto:principal.rcn1@gmail.com"
+                >principal.rcn1@gmail.com</a
+              >, Tel: <a href="tel:26059688">26059688 extn. 5680</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>College of Nursing, St. Stephen’s Hospital</h3>
+          <div class="contact-info">
+            <p><strong>Location:</strong> Near Tis Hazari, Delhi - 110054</p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 20</p>
+            <p>
+              <strong>Contact:</strong>
+              <a href="mailto:consshdelhi@gmail.com">consshdelhi@gmail.com</a>,
+              Tel: <a href="tel:23957977">23957977</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section id="mscn">
+    <div class="container">
+      <h1>M.Sc. Nursing Colleges in Delhi</h1>
+      <div class="college-list">
+        <div class="college-item">
+          <h3>Holy Family College of Nursing</h3>
+          <div class="contact-info">
+            <p><strong>Location:</strong> Okhla Road, New Delhi - 110025</p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 25</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:nursing.college@holyfamilyhospitaldelhi.org"
+                >nursing.college@holyfamilyhospitaldelhi.org</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Institute of Liver & Biliary Sciences</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Location:</strong> D-1, Acharya Shree Tulsi Marg, Vasant
+              Kunj, New Delhi - 110070
+            </p>
+            <p><strong>Type:</strong> Government</p>
+            <p><strong>Seats:</strong> 30</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:principalcon@ilbs.in">principalcon@ilbs.in</a>,
+              <a href="mailto:con@ilbs.in">con@ilbs.in</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Rajkumari Amrit Kaur College of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Location:</strong> Lajpat Nagar-III, New Delhi - 110024
+            </p>
+            <p><strong>Type:</strong> Government</p>
+            <p><strong>Seats:</strong> 24</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:principal@rakcon.com">principal@rakcon.com</a>
+            </p>
+            <p>
+              <strong>Phone:</strong>
+              <a href="tel:011-26435397">011-26435397</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Rufaida College of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Location:</strong> Faculty of Nursing, Jamia Hamdard
+              Nagar, New Delhi - 110062
+            </p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 25</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:principal.rcn1@gmail.com"
+                >principal.rcn1@gmail.com</a
+              >
+            </p>
+            <p>
+              <strong>Phone:</strong>
+              <a href="tel:011-26059688">011-26059688 extn. 5680</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>School of Nursing, St. Stephen’s Hospital</h3>
+          <div class="contact-info">
+            <p><strong>Location:</strong> Near Tis Hazari, Delhi - 110054</p>
+            <p><strong>Type:</strong> Private</p>
+            <p><strong>Seats:</strong> 15</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:consshdelhi@gmail.com">consshdelhi@gmail.com</a>
+            </p>
+            <p>
+              <strong>Phone:</strong>
+              <a href="tel:011-23957977">011-23957977</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Institute of Human Behaviour and Allied Sciences</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Location:</strong> Tahir Pur Road, Dilshad Garden, Delhi -
+              110095
+            </p>
+            <p><strong>Type:</strong> Government</p>
+            <p><strong>Seats:</strong> 8</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:director@ihbas.org">director@ihbas.org</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+    <section id="pbdnc">
+    <div class="container">
+      <h1>Post Basic Diploma in Nursing Colleges in Delhi</h1>
+      <div class="college-list">
+        <div class="college-item">
+          <h3>Army College of Nursing</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Location:</strong> Army Hospital (R&R), Opp. Base
+              Hospital, Delhi Cantt., New Delhi
+            </p>
+            <p><strong>Programs Offered:</strong></p>
+            <ul>
+              <li>Orthopaedic & Rehabilitation Nursing</li>
+              <li>Neonatal Nursing</li>
+              <li>Critical Care Nursing</li>
+              <li>Cardio Thoracic Nursing</li>
+              <li>Oncology Nursing</li>
+              <li>Hematology and Burns & Reconstructive Surgical Nursing</li>
+              <li>Nurse Practitioner in Midwifery</li>
+            </ul>
+            <p><strong>Seats:</strong> 10 (varies by specialty)</p>
+            <p><strong>Type:</strong> Government</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Dharamshila Narayana Superspecialty Hospital</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Location:</strong> Vasundhara Enclave, New Delhi - 110096
+            </p>
+            <p>
+              <strong>Program Offered:</strong> Post Basic Diploma in Oncology
+              Nursing
+            </p>
+            <p><strong>Seats:</strong> 10</p>
+            <p><strong>Type:</strong> Private</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Institute of Human Behaviour and Allied Sciences (IHBAS)</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Location:</strong> Tahir Pur Road, Dilshad Garden, Delhi -
+              110095
+            </p>
+            <p>
+              <strong>Program Offered:</strong> Post Basic Diploma in
+              Psychiatric/Mental Health Nursing
+            </p>
+            <p><strong>Seats:</strong> 20</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:director@ihbas.org">director@ihbas.org</a>
+            </p>
+            <p><strong>Type:</strong> Government</p>
+          </div>
+        </div>
+
+        <div class="college-item">
+          <h3>Rajiv Gandhi Cancer Institute and Research Centre</h3>
+          <div class="contact-info">
+            <p>
+              <strong>Location:</strong> Sir Chotu Ram Marg, Rohini,
+              Institutional Area, Sector 5, Rohini, Delhi - 110085
+            </p>
+            <p>
+              <strong>Program Offered:</strong> Post Basic Diploma in Oncology
+              Nursing
+            </p>
+            <p><strong>Seats:</strong> 2</p>
+            <p>
+              <strong>Email:</strong>
+              <a href="mailto:dhall.madhumita@rgcirc.org"
+                >dhall.madhumita@rgcirc.org</a
+              >
+            </p>
+            <p><strong>Type:</strong> Private</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <p>Email: nursingcollegeindelhi@gmail.com</p>
+          <p>Phone: +91 85888 19270</p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#college">College</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/profile.php?id=61564379894434"
+              target="_blank"
+              class="social-icon"
+            >
+              <img src="facebook-icon.png" alt="Facebook" />
+            </a>
+            <a
+              href="https://www.instagram.com/nursingcollegeindelhi"
+              target="_blank"
+              class="social-icon"
+            >
+              <img src="instagram-icon.png" alt="Instagram" />
+            </a>
+            <a
+              href="https://www.youtube.com/channel/UCifkUFXmr17t-yTp_vFM4KQ"
+              target="_blank"
+              class="social-icon"
+            >
+              <img src="youtube-icon.png" alt="YouTube" />
+            </a>
+            <a
+              href="https://x.com/nursingindelhi1"
+              target="_blank"
+              class="social-icon"
+            >
+              <img src="twitter-icon.png" alt="X" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Nursing College. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+    function toggleMenu() {
+      var navLinks = document.getElementById("nav-links");
+      navLinks.classList.toggle("active");
+    }
+    </script>
+  </body>
+</html>

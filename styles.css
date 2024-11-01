@@ -1,0 +1,853 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p,ul{
+  color: black;
+}
+/* Header Styling */
+header {
+  background-color: #333; /* Dark background color for contrast */
+  color: #fff; /* White text color */
+  padding: 15px 0; /* Space around the header */
+}
+
+.header-container {
+  max-width: 1200px; /* Limit the width of the header */
+  margin: 0 auto; /* Center the header */
+  padding: 0 20px; /* Space inside the header */
+  position: relative; /* Position relative to handle absolute positioning of dropdown */
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .nav-toggle {
+  display: none; /* Hide toggle button by default */
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+nav .nav-menu {
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Align items in a row */
+  justify-content: center; /* Center the navigation items */
+}
+
+nav .nav-menu li {
+  margin: 0 15px; /* Space between navigation items */
+}
+
+nav .nav-menu li a {
+  text-decoration: none; /* Remove underline */
+  color: #fff; /* White text color */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Bold text */
+  transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effects */
+}
+
+nav .nav-menu li a:hover {
+  color: #f39c12; /* Change color on hover */
+  transform: scale(1.1); /* Slightly enlarge the item on hover */
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  nav .nav-toggle {
+    display: block; /* Show toggle button in mobile view */
+  }
+
+  nav .nav-menu {
+    display: none; /* Hide menu items by default */
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    right: 20px;
+    background-color: #333;
+    width: 100%; 
+    height: 100vh;/* Full width of the viewport */
+    flex-direction: column; /* Stack items vertically */
+    padding: 10px 0;
+  }
+
+  nav .nav-menu.active {
+    display: flex; 
+    flex-direction: column;
+  }
+
+  nav .nav-menu li {
+    margin: 10px 0;
+    display: block;
+    
+  }
+
+  nav .nav-menu li a {
+    font-size: 18px; /* Adjust font size for mobile */
+  }
+}
+
+
+/* Home Section Styling */
+#home {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the container */
+  filter: brightness(70%); /* Dim the image slightly */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #efebeb;
+  text-align: center;
+  padding: 20px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5); /* Darken the overlay for better text visibility */
+}
+
+.typing-text {
+  font-family: 'Courier New', Courier, monospace; /* Typing text effect font */
+  font-size: 2.5rem; /* Adjust font size as needed */
+  font-weight: bold;
+  border-right: 4px solid #f39c12; /* Cursor effect */
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(30, end), blink-caret 0.75s step-end infinite;
+  margin: 0;
+}
+
+.typing-text p {
+  font-size: 1.2rem; /* Smaller font size for the paragraph */
+  font-weight: normal;
+  margin-top: 10px;
+  color: white;
+}
+
+/* Keyframes for Typing Effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Keyframes for Blinking Caret Effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #f39c12; }
+}
+
+/* About Section Styling */
+#about {
+background-color: #f4f4f4; /* Light background color for contrast */
+padding: 50px 20px; /* Spacing around the section */
+text-align: center; /* Center-align text */
+}
+
+.about-container {
+max-width: 800px; /* Limit the width for better readability */
+margin: 0 auto; /* Center the container */
+padding: 20px; /* Padding inside the container */
+background-color: #fff; /* White background for the content area */
+border-radius: 8px; /* Rounded corners */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.about-container h2 {
+font-size: 2.5rem; /* Font size for the heading */
+color: #333; /* Dark color for the heading */
+margin-bottom: 20px; /* Space below the heading */
+}
+
+.about-container p {
+font-size: 1rem; /* Font size for paragraphs */
+color: #666; /* Light grey color for text */
+line-height: 1.6; /* Line height for readability */
+margin-bottom: 20px; /* Space between paragraphs */
+}
+
+.cta-button {
+display: inline-block;
+padding: 15px 30px; /* Padding for the button */
+font-size: 1rem; /* Font size for the button */
+color: #fff; /* White text color */
+background-color: #007bff; /* Blue background color */
+border: none; /* Remove default border */
+border-radius: 5px; /* Rounded corners for the button */
+text-decoration: none; /* Remove underline */
+transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+}
+
+.cta-button:hover {
+background-color: #0056b3; /* Darker blue on hover */
+transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.home-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+}
+
+.home-section img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.typing-text {
+  font-size: 1.5rem; /* Adjust this as needed */
+  white-space: nowrap; /* Prevents text from wrapping */
+  overflow: hidden; /* Ensures text stays within bounds */
+  display: inline-block;
+}
+
+.home-section .content {
+  padding: 20px;
+}
+
+/* Responsive Styles for Mobile View */
+@media (max-width: 768px) {
+  .home-section {
+    background-size: contain;
+    height: auto;
+  }
+
+  .typing-text {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+    max-width: 100%; /* Ensure it doesn’t overflow the screen */
+    white-space: normal; /* Allow wrapping on smaller screens */
+    text-align: center;
+  }
+
+  .home-section .content {
+    padding: 10px;
+    margin: 0 auto;
+  }
+}
+
+/* Courses Section Styling */
+#courses {
+padding: 50px 20px; /* Space around the section */
+background-color: #f9f9f9; /* Light background color for contrast */
+text-align: center; /* Center-align text */
+}
+
+#courses h2 {
+font-size: 2.5rem; /* Font size for the heading */
+color: #333; /* Dark color for the heading */
+margin-bottom: 30px; /* Space below the heading */
+}
+
+.course-cards {
+display: flex; /* Align cards in a row */
+flex-wrap: wrap; /* Allow wrapping to the next line */
+justify-content: center; /* Center the cards horizontally */
+gap: 20px; /* Space between cards */
+}
+
+.card {
+display: block;
+width: 250px; /* Fixed width for cards */
+padding: 20px; /* Space inside the card */
+background-color: #fff; /* White background for cards */
+border-radius: 8px; /* Rounded corners */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+text-decoration: none; /* Remove underline */
+color: #333; /* Text color */
+transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition effects */
+}
+
+.card h3 {
+font-size: 1.5rem; /* Font size for card titles */
+margin-bottom: 10px; /* Space below the title */
+}
+
+.card p {
+font-size: 1rem; /* Font size for card descriptions */
+color: #666; /* Light grey color for text */
+}
+
+.card:hover {
+transform: translateY(-5px); /* Slightly lift the card on hover */
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+@media (max-width: 768px) {
+.course-cards {
+  flex-direction: column; /* Stack cards vertically on small screens */
+  align-items: center; /* Center align the cards */
+}
+}
+
+/* College Section Styling */
+#college {
+padding: 50px 20px; /* Space around the section */
+background-color: #f0f8ff; /* Light blue background for a fresh look */
+text-align: center; /* Center-align text */
+}
+
+#college h2 {
+font-size: 2.5rem; /* Font size for the heading */
+color: #333; /* Dark color for the heading */
+margin-bottom: 30px; /* Space below the heading */
+}
+
+.college-cards {
+display: flex; /* Align cards in a row */
+justify-content: center; /* Center the card horizontally */
+}
+
+.card {
+display: block;
+width: 300px; /* Fixed width for the card */
+padding: 20px; /* Space inside the card */
+background-color: #fff; /* White background for the card */
+border-radius: 10px; /* Rounded corners */
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+text-decoration: none; /* Remove underline */
+color: #333; /* Text color */
+transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Smooth transition effects */
+}
+
+.card h3 {
+font-size: 1.75rem; /* Font size for the card title */
+margin-bottom: 15px; /* Space below the title */
+}
+
+.card p {
+font-size: 1rem; /* Font size for card descriptions */
+color: #666; /* Light grey color for text */
+}
+
+.card:hover {
+transform: translateY(-8px); /* Slightly lift the card on hover */
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Darker shadow on hover */
+background-color: #e6f7ff; /* Light blue background on hover */
+}
+
+@media (max-width: 768px) {
+.college-cards {
+  flex-direction: column; /* Stack cards vertically on small screens */
+  align-items: center; /* Center align the card */
+}
+}
+
+/* Contact Section Styling */
+#contact {
+padding: 50px 20px; /* Space around the section */
+background-color: #ffffff; /* White background for clarity */
+text-align: center; /* Center-align text */
+}
+
+#contact h2 {
+font-size: 2.5rem; /* Font size for the heading */
+color: #333; /* Dark color for the heading */
+margin-bottom: 30px; /* Space below the heading */
+}
+
+.contact-form {
+max-width: 600px; /* Limit the width of the form */
+margin: 0 auto; /* Center the form */
+padding: 20px; /* Padding inside the form */
+background-color: #f9f9f9; /* Light grey background for the form */
+border-radius: 8px; /* Rounded corners for the form */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.contact-form input,
+.contact-form textarea {
+width: 100%; /* Full width for input fields */
+padding: 12px; /* Padding inside input fields */
+margin-bottom: 15px; /* Space between fields */
+border: 1px solid #ddd; /* Light border color */
+border-radius: 5px; /* Rounded corners for input fields */
+box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.contact-form textarea {
+height: 150px; /* Height for the textarea */
+resize: vertical; /* Allow vertical resizing */
+}
+
+.contact-form button {
+display: inline-block;
+padding: 15px 30px; /* Padding for the button */
+font-size: 1rem; /* Font size for the button */
+color: #fff; /* White text color */
+background-color: #007bff; /* Blue background color */
+border: none; /* Remove default border */
+border-radius: 5px; /* Rounded corners for the button */
+cursor: pointer; /* Pointer cursor on hover */
+transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+}
+
+.contact-form button:hover {
+background-color: #0056b3; /* Darker blue on hover */
+transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.call-us-popup {
+margin-top: 20px; /* Space above the call button */
+}
+
+.call-us-button {
+display: inline-block;
+padding: 10px 20px; /* Padding for the call button */
+font-size: 1rem; /* Font size for the call button */
+color: #fff; /* White text color */
+background-color: #28a745; /* Green background color */
+border-radius: 5px; /* Rounded corners for the button */
+text-decoration: none; /* Remove underline */
+transition: background-color 0.3s; /* Smooth transition effects */
+}
+
+.call-us-button:hover {
+background-color: #218838; /* Darker green on hover */
+}
+
+/* Blog Post Styling */
+.blog-post {
+  padding: 15px;
+  background-color: #f9f9f9;
+  align-items: center;
+}
+
+.blog-post h1 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.blog-post h2 {
+  font-size: 1.4em;
+  margin-top: 25px;
+}
+
+.blog-post h3 {
+  font-size: 1.1em;
+  margin-top: 15px;
+}
+
+.blog-post p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.blog-post ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.blog-section {
+  background: #f4f4f4;
+  padding: 40px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 15px;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 750px; /* Adjusted width to make the card smaller */
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.blog-content {
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.blog-content h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.blog-content p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.read-more {
+  display: inline-block;
+  font-size: 15px;
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.read-more:hover {
+  color: #0056b3;
+  border-bottom: 2px solid #0056b3;
+}
+
+.blog-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Quote Styling */
+.blog-quote {
+  font-size: 17px;
+  font-style: italic;
+  color: #444;
+  margin: 15px 0;
+  padding-left: 15px;
+  border-left: 3px solid #007bff;
+}
+
+
+/* Footer Styling */
+footer {
+background-color: #333; /* Dark background color */
+color: #fff; /* White text color */
+padding: 40px 20px; /* Padding around the footer */
+}
+
+.footer-container {
+display: flex; /* Align sections in a row */
+flex-wrap: wrap; /* Allow wrapping on small screens */
+justify-content: space-between; /* Space out the sections */
+}
+
+.footer-section {
+flex: 1; /* Allow sections to grow */
+min-width: 200px; /* Minimum width for responsiveness */
+margin-right: 20px; /* Space between sections */
+}
+
+.footer-section h3 {
+font-size: 1.5rem; /* Font size for section headings */
+margin-bottom: 15px; /* Space below the heading */
+color: #fff; /* White text color for headings */
+}
+
+.footer-section p,
+.footer-section ul {
+font-size: 1rem; /* Font size for text and list items */
+color: #ccc; /* Light grey color for text */
+margin: 0; /* Remove default margin */
+padding: 0; /* Remove default padding */
+}
+
+.footer-section ul {
+list-style-type: none; /* Remove bullet points */
+}
+
+.footer-section ul li {
+margin-bottom: 10px; /* Space between list items */
+}
+
+.footer-section ul li a {
+color: #ccc; /* Light grey color for links */
+text-decoration: none; /* Remove underline */
+}
+
+.footer-section ul li a:hover {
+color: #fff; /* White color on hover */
+}
+
+.social-links {
+display: flex; /* Align social icons in a row */
+gap: 10px; /* Space between icons */
+}
+
+.social-icon img {
+width: 30px; /* Fixed width for social icons */
+height: auto; /* Maintain aspect ratio */
+transition: transform 0.3s, opacity 0.3s; /* Smooth transition effects */
+}
+
+.social-icon:hover img {
+transform: scale(1.1); /* Slightly enlarge the icon on hover */
+opacity: 0.8; /* Slightly fade the icon on hover */
+}
+
+.footer-bottom {
+text-align: center; /* Center-align text */
+margin-top: 20px; /* Space above the footer bottom */
+}
+
+.footer-bottom p {
+font-size: 0.875rem; /* Font size for footer text */
+color: #ccc; /* Light grey color for text */
+margin: 0; /* Remove default margin */
+}
+
+@media (max-width: 768px) {
+.footer-container {
+  flex-direction: column; /* Stack sections vertically on small screens */
+  align-items: center; /* Center-align the sections */
+}
+
+.footer-section {
+  margin-bottom: 20px; /* Space below sections */
+  margin-right: 0; /* Remove right margin */
+}
+}
+
+/* Basic Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.header-container {
+  width: 100%;
+  background-color: #333;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 0rem;
+}
+
+nav .logo a {
+  display: flex;
+  align-items: center;
+  
+}
+
+nav .logo img {
+  height: 40px; /* Adjust height as needed */
+  width: auto; /* Maintain aspect ratio */
+  display: block;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 0rem;
+  list-style: none;
+}
+
+.nav-menu li {
+  margin: 0;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-menu a:hover {
+  color: #00eaff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-menu {
+      display: none; /* Hide menu by default */
+      flex-direction: column;
+      width: 100%;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      z-index: 1000;
+  }
+
+  .nav-menu.open {
+      display: flex; /* Show menu when toggled */
+  }
+
+  .nav-menu li {
+      margin: 0;
+      padding: 1rem;
+      text-align: center;
+  }
+
+  .menu-toggle {
+      display: block; /* Show hamburger icon on mobile */
+  }
+
+  .menu-toggle i {
+      font-size: 1.5rem;
+  }
+}
+
+
+/* Blog Section Styles */
+#blog {
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+}
+
+.blog-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.blog-section h2 {
+  text-align: center;
+  font-size: 38px;
+  color: #2c3e50;
+  margin-bottom: 50px;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 35px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translateY(0);
+}
+
+.blog-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover img {
+  transform: scale(1.05);
+}
+
+.blog-content {
+  padding: 25px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.blog-content h3 {
+  font-size: 26px;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+.blog-content p {
+  font-size: 16px;
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.read-more {
+  display: inline-block;
+  font-size: 15px;
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.read-more:hover {
+  color: #0056b3;
+  border-bottom: 2px solid #0056b3;
+}
+
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .blog-card {
+    flex-direction: row;
+  }
+
+  .blog-card img {
+    width: 50%;
+    height: auto;
+  }
+
+  .blog-content {
+    padding: 30px;
+  }
+
+  .blog-content h3 {
+    font-size: 28px;
+  }
+
+  .blog-content p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-content h3 {
+    font-size: 22px;
+  }
+
+  .blog-content p {
+    font-size: 15px;
+  }
+
+  .read-more {
+    font-size: 15px;
+  }
+}
